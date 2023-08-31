@@ -1,7 +1,12 @@
-// Описаний в документації
 import flatpickr from 'flatpickr';
-// Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
+
+Notiflix.Notify.init({
+  width: '300px',
+  distance: '30px',
+  position: 'center-top',
+});
 
 const options = {
   enableTime: true,
@@ -12,6 +17,10 @@ const options = {
     console.log(selectedDates[0]);
   },
 };
+
+function addLeadingZero(value) {
+  return String(value).padStart(2, '0');
+}
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
