@@ -1,13 +1,18 @@
 import Notiflix from 'notiflix';
 
 const refs = {
-  form: document.querySelector('.form'),
-  inputDelay: document.querySelector('input[name="delay"]'),
-  inputSpep: document.querySelector('input[name="step"]'),
-  inputAmount: document.querySelector('input[name="amount"]'),
+  // form: document.querySelector('.form'),
+  // inputDelay: document.querySelector('input[name="delay"]'),
+  // inputSpep: document.querySelector('input[name="step"]'),
+  // inputAmount: document.querySelector('input[name="amount"]'),
 };
 
-refs.form.addEventListener('submit', submitPromise);
+const formEl = document.querySelector('.form');
+const inputDelayEl = document.querySelector('input[name="delay"]');
+const inputSpepEl = document.querySelector('input[name="step"]');
+const inputAmountEl = document.querySelector('input[name="amount"]');
+
+formEl.addEventListener('submit', submitPromise);
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -25,9 +30,9 @@ function createPromise(position, delay) {
 function submitPromise(e) {
   e.preventDefault();
 
-  const delay = Number(refs.inputDelay.value);
-  const step = Number(refs.inputSpep.value);
-  const amount = Number(refs.inputAmount.value);
+  const delay = Number(inputDelayEl.value);
+  const step = Number(inputSpepEl.value);
+  const amount = Number(inputAmountEl.value);
 
   for (let i = 1; i <= amount; i += 1) {
     let stepProm = delay + step * (i - 1);
