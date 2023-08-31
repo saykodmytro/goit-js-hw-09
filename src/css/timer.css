@@ -31,18 +31,14 @@ button {
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
-  font-size: 36px;
-  color: rgb(39, 15, 189);
-  width: 150px;
-  height: 50px;
+  font-size: 28px;
+  width: 120px;
+  height: 40px;
   border: none;
   cursor: pointer;
+  color: white;
+  background-color: #9d8787;
 }
-
-/* button:hover:not([disabled]) {
-  background-color: yellow;
-  color: rgb(39, 15, 189);
-} */
 
 a {
   background-color: black;
@@ -52,11 +48,11 @@ a {
   cursor: pointer;
 }
 
-button:hover:not([disabled]),
+/* button:hover:not([disabled]),
 a:hover {
   color: rgb(20, 93, 165);
   background-color: rgb(97, 240, 97);
-}
+} */
 
 .timer {
   display: flex;
@@ -73,7 +69,7 @@ a:hover {
 }
 
 .active-timer {
-  background-color: rgb(97, 240, 97);
+  background-color: #a1c1c1;
 }
 
 .startBtnDisable {
